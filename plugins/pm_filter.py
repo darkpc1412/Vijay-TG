@@ -690,6 +690,79 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ]
             ),
         )
+    elif query.data == "bright":
+        await bright(client, query.message)
+    elif query.data == "mix":
+        await mix(client, query.message)
+    elif query.data == "b|w":
+        await black_white(client, query.message)
+    elif query.data == "circlewithbg":
+        await circle_with_bg(client, query.message)
+    elif query.data == "circlewithoutbg":
+        await circle_without_bg(client, query.message)
+    elif query.data == "green":
+        await green_border(client, query.message)
+    elif query.data == "blue":
+        await blue_border(client, query.message)
+    elif query.data == "red":
+        await red_border(client, query.message)
+    elif query.data == "black":
+        await black_border(client, query.message)
+    elif query.data == "circle_sticker":
+        await round_sticker(client, query.message)
+    elif query.data == "inverted":
+        await inverted(client, query.message)
+    elif query.data == "stkr":
+        await sticker(client, query.message)
+    elif query.data == "cur_ved":
+        await edge_curved(client, query.message)
+    elif query.data == "90":
+        await rotate_90(client, query.message)
+    elif query.data == "180":
+        await rotate_180(client, query.message)
+    elif query.data == "270":
+        await rotate_270(client, query.message)
+    elif query.data == "contrast":
+        await contrast(client, query.message)
+    elif query.data == "box":
+        await box_blur(client, query.message)
+    elif query.data == "gas":
+        await g_blur(client, query.message)
+    elif query.data == "normal":
+        await normal_blur(client, query.message)
+    elif query.data == "sepia":
+        await sepia_mode(client, query.message)
+    elif query.data == "pencil":
+        await pencil(client, query.message)
+    elif query.data == "cartoon":
+        await cartoon(client, query.message)
+    elif query.data == "normalglitch1":
+        await normalglitch_1(client, query.message)
+    elif query.data == "normalglitch2":
+        await normalglitch_2(client, query.message)
+    elif query.data == "normalglitch3":
+        await normalglitch_3(client, query.message)
+    elif query.data == "normalglitch4":
+        await normalglitch_4(client, query.message)
+    elif query.data == "normalglitch5":
+        await normalglitch_5(client, query.message)
+    elif query.data == "scanlineglitch1":
+        await scanlineglitch_1(client, query.message)
+    elif query.data == "scanlineglitch2":
+        await scanlineglitch_2(client, query.message)
+    elif query.data == "scanlineglitch3":
+        await scanlineglitch_3(client, query.message)
+    elif query.data == "scanlineglitch4":
+        await scanlineglitch_4(client, query.message)
+    elif query.data == "scanlineglitch5":
+        await scanlineglitch_5(client, query.message)
+    elif query.data == "rmbgwhite":
+        await removebg_white(client, query.message)
+    elif query.data == "rmbgplain":
+        await removebg_plain(client, query.message)
+    elif query.data == "rmbgsticker":
+        await removebg_sticker(client, query.message)
+    elif query.data == "pages":
     elif query.data == "pages":
         await query.answer()
     elif query.data == "start":
@@ -718,6 +791,36 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=Script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "photo":
+        buttons = [[
+            InlineKeyboardButton(text="𝖡𝗋𝗂𝗀𝗍𝗁", callback_data="bright"),
+            InlineKeyboardButton(text="𝖬𝗂𝗑𝖾𝖽", callback_data="mix"),
+            InlineKeyboardButton(text="𝖡 & 𝖶", callback_data="b|w"),
+            ],[
+            InlineKeyboardButton(text="𝖢𝗂𝗋𝖼𝗅𝖾", callback_data="circle"),
+            InlineKeyboardButton(text="𝖡𝗅𝗎𝗋", callback_data="blur"),
+            InlineKeyboardButton(text="𝖡𝗈𝗋𝖽𝖾𝗋", callback_data="border"),
+            ],[
+            InlineKeyboardButton(text="𝖲𝗍𝗂𝖼𝗄𝖾𝗋", callback_data="stick"),
+            InlineKeyboardButton(text="𝖱𝗈𝗍𝖺𝗍𝖾", callback_data="rotate"),
+            InlineKeyboardButton(text="𝖢𝗈𝗇𝗍𝗋𝖺𝗌𝗍", callback_data="contrast"),
+            ],[
+            InlineKeyboardButton(text="𝖲𝖾𝗉𝗂𝖺", callback_data="sepia"),
+            InlineKeyboardButton(text="𝖯𝖾𝗇𝖼𝗂𝗅", callback_data="pencil"),
+            InlineKeyboardButton(text="𝖢𝖺𝗋𝗍𝗈𝗈𝗇", callback_data="cartoon"),
+            ],[
+            InlineKeyboardButton(text="𝖨𝗇𝗏𝖾𝗋𝗍", callback_data="inverted"),
+            InlineKeyboardButton(text="𝖦𝗅𝗂𝗍𝖼𝗁", callback_data="glitch"),
+            InlineKeyboardButton(text="𝖱𝖾𝗆𝗈𝗏𝖾 𝖡𝖦", callback_data="removebg")
+            ],[
+            InlineKeyboardButton(text="𝖢𝗅𝗈𝗌𝖾", callback_data="close_data")
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="Select your required mode from below!",
             reply_markup=reply_markup,
             parse_mode='html'
         )
