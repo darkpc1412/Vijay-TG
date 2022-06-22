@@ -8,7 +8,6 @@ telegraph==1.4.1
 googletrans
 gTTS
 opencv-python-headless
-cv2
 config
 asyncio==3.4.3
 aiohttp==3.7.4
