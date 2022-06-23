@@ -32,7 +32,7 @@ from pyrogram.types import (
     Message,
 )
 from pyrogram import Client as app
-from wbb import BOT_ID, SUDOERS,  log
+from wbb import SUDOERS,  log
 from wbb.core.decorators.errors import capture_err
 from wbb.core.keyboard import ikb
 from wbb.utils.dbfunctions import (
@@ -104,7 +104,7 @@ async def member_permissions(chat_id: int, user_id: int):
 from wbb.core.decorators.permissions import adminsOnly
 
 admins_in_chat = {}
-
+BOT_ID = "5011611409"
 
 async def list_admins(chat_id: int):
     global admins_in_chat
