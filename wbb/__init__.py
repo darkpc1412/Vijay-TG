@@ -1,6 +1,6 @@
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 import time
-
+from info import DATABASE_URI 
 class Log:
     def __init__(self, save_to_file=False, file_name="wbb.log"):
         self.save_to_file = save_to_file
@@ -27,5 +27,5 @@ log = Log(True, "bot.log")
 
 
 log.info("Initializing MongoDB client")
-mongo_client = MongoClient(MONGO_URL)
+mongo_client = MongoClient(DATABASE_URI)
 db = mongo_client.wbb
