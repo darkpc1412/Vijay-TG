@@ -3,7 +3,6 @@
 import sys
 import traceback
 from functools import wraps
-from info import LOG_GROUP as LOG_GROUP_ID
 
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 
