@@ -28,7 +28,7 @@ from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.types import Message
 
 from wbb import SUDOERS, app
-from wbb.modules.admin import member_permissions
+from wbb.plugins.adminn import member_permissions
 
 
 async def authorised(func, subFunc2, client, message, *args, **kwargs):
