@@ -31,8 +31,8 @@ from pyrogram.types import (
     ChatPermissions,
     Message,
 )
-
-from wbb import BOT_ID, SUDOERS, app, log
+from pyrogram import Client as app
+from wbb import BOT_ID, SUDOERS,  log
 from wbb.core.decorators.errors import capture_err
 from wbb.core.keyboard import ikb
 from wbb.utils.dbfunctions import (
