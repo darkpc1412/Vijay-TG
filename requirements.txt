@@ -15,6 +15,7 @@ aiofiles
 requests
 pyshorteners
 bs4
+img2pdf
 psutil
 imdbpy
 youtube-search-python==1.4.6
