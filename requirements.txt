@@ -28,3 +28,4 @@ requests
 ytthumb
 pillow
 pykeyboard
+speedtest-cli
