@@ -324,3 +324,5 @@ async def get_user_id_and_usernames(client) -> dict:
     for user in users:
         users_[user[0]] = user[3]
     return users_
+
+aiohttpsession = ClientSession()
