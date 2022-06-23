@@ -29,3 +29,4 @@ ytthumb
 pillow
 pykeyboard
 speedtest-cli
+pyromod
