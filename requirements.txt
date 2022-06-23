@@ -31,3 +31,4 @@ pillow
 pykeyboard
 speedtest-cli
 pyromod
+aiohttpsession
