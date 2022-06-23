@@ -1,5 +1,5 @@
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
-
+import time
 
 class Log:
     def __init__(self, save_to_file=False, file_name="wbb.log"):
