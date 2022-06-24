@@ -30,17 +30,16 @@ from random import randint
 from re import findall
 from re import sub as re_sub
 from sys import executable
-
+from aiohttp import ClientSession
 import aiofiles
 import speedtest
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 from pyrogram.types import Message
-
 from wbb import aiohttpsession as aiosession
 from wbb.utils.dbfunctions import start_restart_stage
 from wbb.utils.http import get, post
 
-
+aiosession = ClientSession()
 async def restart(m: Message):
     if m:
         await start_restart_stage(m.chat.id, m.message_id)
