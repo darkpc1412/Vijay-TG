@@ -1,3 +1,4 @@
+from aiohttp import ClientSession
 from pyrogram import Client as app
 import os
 import time
@@ -31,3 +32,5 @@ log = Log(True, "bot.log")
 log.info("Initializing MongoDB client")
 mongo_client = MongoClient(DATABASE_URI)
 db = mongo_client.wbb
+
+aiohttpsession = ClientSession()
