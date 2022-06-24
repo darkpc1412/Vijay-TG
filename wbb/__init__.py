@@ -34,3 +34,5 @@ mongo_client = MongoClient(DATABASE_URI)
 db = mongo_client.wbb
 
 aiohttpsession = ClientSession()
+
+arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
