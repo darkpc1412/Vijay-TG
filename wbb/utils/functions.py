@@ -21,7 +21,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
-from aiohttp import ClientSession
 from asyncio import gather
 from datetime import datetime, timedelta
 from io import BytesIO
@@ -324,5 +323,3 @@ async def get_user_id_and_usernames(client) -> dict:
     for user in users:
         users_[user[0]] = user[3]
     return users_
-
-aiohttpsession = ClientSession()
